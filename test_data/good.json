@@ -1,0 +1,62 @@
+{
+  "buienradar": {
+    "$id": "2",
+    "copyright": "(C)opyright Buienradar / RTL. Alle rechten voorbehouden",
+    "terms": "Deze feed mag vrij worden gebruikt onder voorwaarde van bronvermelding buienradar.nl inclusief een hyperlink naar https://www.buienradar.nl. Aan de feed kunnen door gebruikers of andere personen geen rechten worden ontleend."
+  },
+  "actual": {
+    "stationmeasurements": [
+      {
+        "$id": "31",
+        "stationid": 6240,
+        "stationname": "Meetstation Schiphol",
+        "lat": 52.3,
+        "lon": 4.77,
+        "regio": "Amsterdam",
+        "timestamp": "2026-11-25T22:40:00",
+        "weatherdescription": "Zonnig",
+        "iconurl": "https://cdn.buienradar.nl/resources/images/icons/weather/30x30/aa.png",
+        "fullIconUrl": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/AA.png",
+        "graphUrl": "https://www.buienradar.nl/nederland/weerbericht/weergrafieken/aa",
+        "winddirection": "O",
+        "airpressure": 1019.3,
+        "temperature": 17,
+        "groundtemperature": -1.5,
+        "feeltemperature": 17,
+        "visibility": 52800.0,
+        "windgusts": 6,
+        "windspeed": 7.4,
+        "windspeedBft": 3,
+        "humidity": 82.0,
+        "precipitation": 0.0,
+        "sunpower": 0.0,
+        "rainFallLast24Hour": 0.0,
+        "rainFallLastHour": 0.0,
+        "winddirectiondegrees": 84
+      }
+    ]
+  },
+  "forecast": {
+    "weatherreport": {
+      "published": "2026-01-01T06:00:00",
+      "title": "Zonnig zomerweer",
+      "summary": "Een zonnige en aangename dag met weinig wind."
+    },
+    "fivedayforecast": [
+      {
+        "day": "2026-01-01T00:00:00",
+        "windDirection": "zw",
+        "mintemperatureMin": 14,
+        "maxtemperatureMax": 22,
+        "rainChance": 10,
+        "sunChance": 80,
+        "wind": 3,
+        "mmRainMin": 0,
+        "mmRainMax": 0,
+        "weatherdescription": "Zonnig en droog",
+        "mintemperature": "14",
+        "maxtemperature": "22"
+      }
+    ]
+  }
+}

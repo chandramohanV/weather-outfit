@@ -1,0 +1,22 @@
+{
+  "station": "Meetstation Schiphol",
+
+  "_comment_thresholds": "Edit these to decide what counts as GOOD, BAD or SEVERE weather. Anything that is not BAD or SEVERE is GOOD.",
+
+  "severe": {
+    "wind_bft_at_least": 7,
+    "gusts_ms_at_least": 20,
+    "min_temp_at_most": -5,
+    "max_temp_at_least": 32,
+    "rain_mm_at_least": 15,
+    "keywords": ["onweer", "storm", "ijzel", "gladheid", "hagel", "sneeuw", "code oranje", "code rood"]
+  },
+
+  "bad": {
+    "rain_chance_at_least": 60,
+    "rain_mm_at_least": 2,
+    "wind_bft_at_least": 5,
+    "max_temp_at_most": 5,
+    "max_temp_at_least": 28
+  }
+}

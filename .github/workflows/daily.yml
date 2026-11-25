@@ -1,0 +1,35 @@
+name: Daily outfit notification
+
+on:
+  schedule:
+    # 05:30 UTC = 06:30 Amsterdam in winter, 07:30 in summer
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      scenario:
+        description: "Data to use (live = real Buienradar data, others = test data)"
+        type: choice
+        default: live
+        options: [live, good, bad, severe]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Send notification
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          BUIENRADAR_STATION: ${{ vars.BUIENRADAR_STATION }}
+        run: |
+          SCENARIO="${{ github.event.inputs.scenario || 'live' }}"
+          if [ "$SCENARIO" = "live" ]; then
+            python outfit.py
+          else
+            python outfit.py --test "$SCENARIO"
+          fi

@@ -1,0 +1,62 @@
+{
+  "buienradar": {
+    "$id": "2",
+    "copyright": "(C)opyright Buienradar / RTL. Alle rechten voorbehouden",
+    "terms": "Deze feed mag vrij worden gebruikt onder voorwaarde van bronvermelding buienradar.nl inclusief een hyperlink naar https://www.buienradar.nl. Aan de feed kunnen door gebruikers of andere personen geen rechten worden ontleend."
+  },
+  "actual": {
+    "stationmeasurements": [
+      {
+        "$id": "31",
+        "stationid": 6240,
+        "stationname": "Meetstation Schiphol",
+        "lat": 52.3,
+        "lon": 4.77,
+        "regio": "Amsterdam",
+        "timestamp": "2026-11-25T22:40:00",
+        "weatherdescription": "Storm",
+        "iconurl": "https://cdn.buienradar.nl/resources/images/icons/weather/30x30/aa.png",
+        "fullIconUrl": "https://cdn.buienradar.nl/resources/images/icons/weather/96x96/AA.png",
+        "graphUrl": "https://www.buienradar.nl/nederland/weerbericht/weergrafieken/aa",
+        "winddirection": "O",
+        "airpressure": 1019.3,
+        "temperature": 7,
+        "groundtemperature": -1.5,
+        "feeltemperature": 1,
+        "visibility": 52800.0,
+        "windgusts": 27,
+        "windspeed": 7.4,
+        "windspeedBft": 8,
+        "humidity": 82.0,
+        "precipitation": 0.0,
+        "sunpower": 0.0,
+        "rainFallLast24Hour": 0.0,
+        "rainFallLastHour": 0.0,
+        "winddirectiondegrees": 84
+      }
+    ]
+  },
+  "forecast": {
+    "weatherreport": {
+      "published": "2026-01-01T06:00:00",
+      "title": "Code oranje: storm",
+      "summary": "Zware windstoten tot 100 km/u en kans op onweer. KNMI waarschuwt voor storm."
+    },
+    "fivedayforecast": [
+      {
+        "day": "2026-01-01T00:00:00",
+        "windDirection": "zw",
+        "mintemperatureMin": 4,
+        "maxtemperatureMax": 8,
+        "rainChance": 95,
+        "sunChance": 0,
+        "wind": 8,
+        "mmRainMin": 12,
+        "mmRainMax": 25,
+        "weatherdescription": "Storm met zware windstoten en onweer",
+        "mintemperature": "4",
+        "maxtemperature": "8"
+      }
+    ]
+  }
+}
