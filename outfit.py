@@ -195,9 +195,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.dry_run:
         return 0
-    topic = os.environ.get("NTFY_TOPIC")
+    topic = os.environ.get("NTFY_TOPIC") or cfg.get("ntfy_topic")
     if not topic:
-        print("\nERROR: set NTFY_TOPIC (your ntfy topic name) to send the push.", file=sys.stderr)
+        print("\nERROR: set NTFY_TOPIC or ntfy_topic in config.json to send the push.", file=sys.stderr)
         return 1
     send_ntfy(topic, msg)
     print(f"\nSent to ntfy topic '{topic[:3]}…'")

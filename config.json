@@ -1,6 +1,9 @@
 {
   "station": "Meetstation Schiphol",
 
+  "_comment_ntfy": "Subscribe to this topic in the ntfy iPhone app. A NTFY_TOPIC secret/env var overrides it.",
+  "ntfy_topic": "outfit-193c1ea7f02f",
+
   "_comment_thresholds": "Edit these to decide what counts as GOOD, BAD or SEVERE weather. Anything that is not BAD or SEVERE is GOOD.",
 
   "severe": {

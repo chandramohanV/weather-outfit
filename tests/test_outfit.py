@@ -38,7 +38,12 @@ class TestScenarios(unittest.TestCase):
     def test_missing_topic_fails(self):
         import os
         os.environ.pop("NTFY_TOPIC", None)
-        self.assertEqual(outfit.main(["--test", "good"]), 1)
+        real = outfit.load_config
+        outfit.load_config = lambda: {k: v for k, v in real().items() if k != "ntfy_topic"}
+        try:
+            self.assertEqual(outfit.main(["--test", "good"]), 1)
+        finally:
+            outfit.load_config = real
 
 
 if __name__ == "__main__":

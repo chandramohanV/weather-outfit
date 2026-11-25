@@ -4,6 +4,10 @@ on:
   schedule:
     # 05:30 UTC = 06:30 Amsterdam in winter, 07:30 in summer
     - cron: "30 5 * * *"
+  push:
+    # Edit test-notification.txt (good / bad / severe / live) and push to send a test
+    branches: [main]
+    paths: [test-notification.txt]
   workflow_dispatch:
     inputs:
       scenario:
@@ -27,7 +31,11 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           BUIENRADAR_STATION: ${{ vars.BUIENRADAR_STATION }}
         run: |
-          SCENARIO="${{ github.event.inputs.scenario || 'live' }}"
+          if [ "${{ github.event_name }}" = "push" ]; then
+            SCENARIO="$(head -n1 test-notification.txt | tr -d '[:space:]')"
+          else
+            SCENARIO="${{ github.event.inputs.scenario || 'live' }}"
+          fi
           if [ "$SCENARIO" = "live" ]; then
             python outfit.py
           else

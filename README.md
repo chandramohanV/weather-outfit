@@ -45,6 +45,12 @@ Go to **Actions → Daily outfit notification → Run workflow**, choose a scena
 | `severe` | Storm 8 Bft, gusts 97 km/h, thunder, code orange | ⚠️ SEVERE, urgent priority |
 | `live` | Real Buienradar data right now | depends on the weather |
 
+**Or by pushing:** put `good`, `bad`, `severe` or `live` in `test-notification.txt`, commit and push. That
+also starts the workflow.
+
+The topic comes from the `NTFY_TOPIC` secret if it's set; otherwise from `ntfy_topic` in `config.json`.
+Note that `config.json` is visible to anyone who can see the repo.
+
 Test notifications start with `[TEST]`. The test data lives in `test_data/*.json` and uses the same format as
 the real Buienradar feed, so you can edit it to try your own cases.
 
